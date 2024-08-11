@@ -69,6 +69,5 @@ detection_result = detector.detect(image)
 
 # STEP 5: Process the classification result. In this case, visualize it.
 annotated_image = draw_landmarks_on_image(image.numpy_view(), detection_result)
-# cv2_imshow(cv2.cvtColor(annotated_image, cv2.COLOR_RGB2BGR))
-cv2.imshow("test", annotated_image)
+cv2.imshow("test", cv2.cvtColor(annotated_image, cv2.COLOR_RGB2BGR))
 cv2.waitKey(0)

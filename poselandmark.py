@@ -50,10 +50,10 @@ detection_result = detector.detect(image)
 
 # STEP 5: Process the detection result. In this case, visualize it.
 annotated_image = draw_landmarks_on_image(image.numpy_view(), detection_result)
-cv2.imshow(cv2.cvtColor(annotated_image, cv2.COLOR_RGB2BGR))
+cv2.imshow("test", cv2.cvtColor(annotated_image, cv2.COLOR_RGB2BGR))
 cv2.waitKey(0)
 
-segmentation_mask = detection_result.segmentation_masks[0].numpy_view()
-visualized_mask = np.repeat(segmentation_mask[:, :, np.newaxis], 3, axis=2) * 255
-cv2.imshow(visualized_mask)
-cv2.waitKey(0)
+# segmentation_mask = detection_result.segmentation_masks[0].numpy_view()
+# visualized_mask = np.repeat(segmentation_mask[:, :, np.newaxis], 3, axis=2) * 255
+# cv2.imshow(visualized_mask)
+# cv2.waitKey(0)
